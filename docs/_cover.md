@@ -1,7 +1,7 @@
 
-# HandCash Connect SDK <small>0.0.1</small>
+# HandCash Payment Requests <small>0.0.1</small>
 
-> All-in-one BitCoin kit to develop apps and games
+> BIP270 and Simple Payment Requests.
 
-[GitHub](https://github.com/HandCash/handcash-connect-sdk-nodejs/)
+[GitHub]()
 [Get Started](README.md)

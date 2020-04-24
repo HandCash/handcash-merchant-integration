@@ -1,3 +1,3 @@
-# HandCash Connect SDK for NodeJS
+# HandCash Payment Requests
 
-BitCoin App SDK - Connect HandCash wallets to your apps and games.
+Payment URI's - BIP270 and Simple Payment Requests.
