@@ -1,57 +1,43 @@
-# User Authorization
+# Simple Payment Requests
 
 ## Overview
 
-Connect Apps require consent from users in order to access to their profile and use their wallet capabilities. Once the permission is granted, the app is allowed to use the wallet capabilities. This permission can be revoked by the users at any point. 
+Simple payment requests require a specific format, and accept two additional optional fields. Once a payment request is opened, the user's app will display the amount requested, and if provided, your company logo and name. 
 
-Below are the steps each user will need to follow in order to authenticate with your Connect App:
+## Implementation
 
-1. The user will click "Connect to HandCash" redirecting them to the HandCash login portal, or native app.
-2. The user will then log into HandCash if needed.
-3. HandCash will display the Connect App that is requesting authorization as well as the requested permissions.
-4. The user will Accept or Decline access to the Connect App.
-5. HandCash will then redirect the user back to the Connect App according to the action taken:
+There are four different fields you can utilize for your simple payment requrest.
 
-- Accept Permissions -> Authorization Success URL.
-- Decline Permissions -> Authorization Failed URL.
+| Name           | Description                                                             |      |
+| -------------- | ----------------------------------------------------------------------- |------
+| Address (**required**)        | Raw Bitcoin (BSV) address                          |     |
+| BsvAmount (**required**)        | The amount of BSV being requested                     |     |
+| MerchantName        | The name of the requester's business or shop                     |     |
+| LinkToAvatar  | A URL for the logo of the requester's business or shop   |     |
 
-![HandCash Authorization Flow](/../resources/images/handcash-connect-auth-flow.png)
+To create a payment request, each field should be added to the following string:
 
-## Permissions
+`bitcoin:<address>?sv=&amount=<bsvAmount>&label=<merchantName>&avatarUrl=<linkToAvatar>`
 
-There are different levels of permissions. Connect apps will need to request the permissions they want and users will be asked to grant those permissions. Below are the available permissions:
+>This request can be displayed as a **QR code**, or a **clickable link** depending on the setting. Once the user opens your request, they will require in-app verification before they pay. 
 
-| Name           | Description                                                             |
-| -------------- | ----------------------------------------------------------------------- |
-| Balance        | Grants access to get the user's wallet balance.                          |
-| Payment        | Grants access to make payments on the user's behalf.                     |
-| Signing        | Grants access to sign data using the user's identity.                     |
-| PublicProfile  | Grants access to read the user's `handle`, `displayName` and `avatarUrl`. |
-| PrivateProfile | Grants access to read the user's profile details such as `email`.         |
+## Example
 
-Note: `PublicProfile` is a default permission, meaning all Connect Apps will gain access to the following user properties:
+We can use simple payment requests to charge for a cup of coffee.
 
-- **Handle** (stuk_91)
-- **Display Name** (Steven Urban K.)
-- **Avatar URL**: (https://handcash.io/avatar/7d399a0c-22cf-40cf-b162-f5511a4645db)
+- **Address** 1EQtNGbqq2Zhpqhwaf9dCuAjvQz7eAWcHy
+- **BsvAmount** 0.01533906
+- **MerchantName** Joe's Café
+- **LinkToAvatar**: https://bit.ly/3f1fMX7
 
-## Your App Authorization
+All the criteria can be inserted into the simple payment request template, resulting in the following string:
 
-Connect SDK provides a method to build a URL that redirects the user to the HandCash login portal. Once the authorization process has been completed, they will be redirected back to your app.
+`"bitcoin:1EQtNGbqq2Zhpqhwaf9dCuAjvQz7eAWcHy?sv&amount=0.01533906&label=Joe's Café&avatarUrl=https://bit.ly/3f1fMX7"`
 
-This code shows how to generate the URL that **you must use to redirect the user** in order to authorize your app:
+This can be turned into a [URI](bitcoin:1EQtNGbqq2Zhpqhwaf9dCuAjvQz7eAWcHy?sv&amount=0.01533906&label=Joe's20%Café&avatarUrl=https://bit.ly/3f1fMX7), or a QRCode:
 
-```javascript
-const { AppAuthorization } = require('handcash-connect');
-const { Permissions } = AppAuthorization.Permissions;
+![QRCode](/../resources/images/simple-pr-qrcode.png ':class=qrcode') 
 
-const redirectionLoginUrl = AppAuthorization.getRedirectionLoginUrl({
-  appId: 'your appId',
-  permissions: [Permissions.Balance, Permissions.Payment];
-});
+The user can scan or open this payment request, resulting in the following payment confirmation screen:
 
-// Use redirectionLoginUrl to redirect users in your front-end (browser, native app, ...).
-
-```
-
-> Users will be redirected from the HandCash login portal back to either the **Authorization Success URL** or **Authorization Failed URL**, specified by your app in the `App Profile`.
+![Scanned](/../resources/images/simple-pr-scanned.png ':class=screenshot')

@@ -1,16 +1,16 @@
 - [Quick Start](getting-started.md)
-   - [Install](getting-started.md#install)
-   - [Your first payment](getting-started.md#Your-first-payment)
+   - [Overview](getting-started.md#overview)
+   - [Getting Started](getting-started.md#getting-started)
 
 - [Simple Payments](simple-payments.md)
   - [Overview](simple-payments.md#overview)
-  - [Permissions](simple-payments.md#permissions)
-  - [Your app authorization](simple-payments.md#your-app-authorization)
+  - [Implementation](simple-payments.md#implementation)
+  - [Example](simple-payments.md#example)
 
 - [BIP270 Payments](bip270-payments.md)
   - [Overview](bip270-payments.md#overview)
-  - [Permissions](bip270-payments.md#permissions)
-  - [Your app authorization](bip270-payments.md#your-app-authorization)
+  - [Permissions](bip270-payments.md#implementation)
+  - [Your app authorization](bip270-payments.md#example)
 
 - [Error Handling](error-handling.md)
 - [Examples](examples.md)
