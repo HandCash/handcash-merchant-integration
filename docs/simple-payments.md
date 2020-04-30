@@ -19,7 +19,7 @@ To create a payment request, each field should be added to the following string:
 
 `bitcoin:<address>?sv=&amount=<bsvAmount>&label=<merchantName>&avatarUrl=<linkToAvatar>`
 
->This request can be displayed as a **QR code**, or a **clickable link** depending on the setting. Once the user opens your request, they will require in-app verification before they pay. 
+>This request can be displayed as a **QR code**, or a **clickable URI** depending on the setting. Once the user opens your request, they will require in-app verification before they pay. 
 
 ## Example
 
@@ -41,3 +41,4 @@ This can be turned into a [URI](bitcoin:1EQtNGbqq2Zhpqhwaf9dCuAjvQz7eAWcHy?sv&am
 The user can scan or open this payment request, resulting in the following payment confirmation screen:
 
 ![Scanned](/../resources/images/simple-pr-scanned.png ':class=screenshot')
+
