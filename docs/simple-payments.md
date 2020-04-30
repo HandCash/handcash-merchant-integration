@@ -6,7 +6,7 @@ Simple payment requests require a specific format, and accept two additional opt
 
 ## Implementation
 
-There are four different fields you can utilize for your simple payment requrest.
+There are four different fields you can utilize for your simple payment request.
 
 | Name           | Description                                                             |      |
 | -------------- | ----------------------------------------------------------------------- |------

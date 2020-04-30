@@ -26,11 +26,13 @@ A BIP270 GET request should respond with the following fields:
 
 ## Example
 
-We can use BIP270 requests to charge for a cup of coffee.
+We can use BIP270 requests to charge for a cup of coffee, plus a tip for the server.
 
-- **addresses** 1EQtNGbqq2Zhpqhwaf9dCuAjvQz7eAWcHy, 12gqniN78jNfSVama77m3niPKTpdmb8QEF
-- **amount** 0.01533906
-- **merchant name** Joe's Café
+- **restaurant address**: 1EQtNGbqq2Zhpqhwaf9dCuAjvQz7eAWcHy
+- **server address**: 12gqniN78jNfSVama77m3niPKTpdmb8QEF
+- **amount**: 0.01533906
+- **tip**: 0.00432145
+- **merchant name**: Joe's Café
 - **link to avatar**: https://bit.ly/3f1fMX7
 
 ```
@@ -41,11 +43,11 @@ We can use BIP270 requests to charge for a cup of coffee.
    "paymentUrl" : "https://<url>",
    "outputs" : [{
       "script" : "1EQtNGbqq2Zhpqhwaf9dCuAjvQz7eAWcHy",
-      "amount" : "1000000",
+      "amount" : "1533906",
    },
    {
       "script" : "12gqniN78jNfSVama77m3niPKTpdmb8QEF",
-      "amount" : "533906",
+      "amount" : "432145",
    }],
    "memo" : "this is for coffee",
    "merchantData" : {
