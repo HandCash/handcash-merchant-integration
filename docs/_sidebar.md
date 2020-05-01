@@ -9,8 +9,7 @@
 
 - [BIP270 Payments](bip270-payments.md)
   - [Overview](bip270-payments.md#overview)
-  - [Permissions](bip270-payments.md#implementation)
-  - [Your app authorization](bip270-payments.md#example)
+  - [Implementation](bip270-payments.md#implementation)
+  - [Example](bip270-payments.md#example)
 
 - [Error Handling](error-handling.md)
-- [Examples](examples.md)

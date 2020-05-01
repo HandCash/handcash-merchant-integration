@@ -74,9 +74,10 @@ img.qrcode {
 }
 
 img.screenshot {
+    border-radius: 25px;
     max-width: 30%;
-    outline: groove;
-    outline-color: #38CB7C;  
+    border: groove;
+    border-color: #38CB7C;  
     display: block;
     margin-left: auto;
     margin-right: auto;
