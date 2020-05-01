@@ -10,6 +10,6 @@
 - [Legacy Payments](legacy-payments.md)
   - [Overview](legacy-payments.md#overview)
   - [Implementation](legacy-payments.md#implementation)
-  - [Example](legacy-payments.md#example)
+  - [Examples](legacy-payments.md#examples)
 
 - [Error Handling](error-handling.md)

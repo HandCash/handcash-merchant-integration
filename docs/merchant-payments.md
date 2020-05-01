@@ -49,7 +49,7 @@ When the signed transaction is received, you will check to see if the transactio
 `{ success: true }`
 
 
-## Example 
+## Examples 
 
 ### Example 1
 
