@@ -5,7 +5,7 @@
 - [Merchant Payments](merchant-payments.md)
   - [Overview](merchant-payments.md#overview)
   - [Implementation](merchant-payments.md#implementation)
-  - [Example](merchant-payments.md#example)
+  - [Examples](merchant-payments.md#examples)
 
 - [Legacy Payments](legacy-payments.md)
   - [Overview](legacy-payments.md#overview)
