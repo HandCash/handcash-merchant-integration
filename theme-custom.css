@@ -77,6 +77,16 @@ img.screenshot {
     border-radius: 25px;
     max-width: 30%;
     border: groove;
+    border-color: darkgrey;  
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+img.flowchart {
+    border-radius: 25px;
+    max-width: 50%;
     border-color: #38CB7C;  
     display: block;
     margin-left: auto;
