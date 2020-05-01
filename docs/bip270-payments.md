@@ -20,7 +20,7 @@ This URI can also be imbedded into a QR Code, so that it may be scanned.
 
 Once the URI is engaged by the customer, they will fetch the tx template from your server.
 
-That request, should be *responded* to by returning an *object* with the following fields:
+That request, should be responded to by returning an *object* with the following fields:
 
 | Name           | Expected Value                                                             |Type      |
 | -------------- | ----------------------------------------------------------------------- |------
@@ -88,7 +88,7 @@ The customer swipes right to confirm the payment and you receive a signed txhex 
 { transaction: '01000000017189fa12d60f042a1f5d9a1be07ad9c687e70ca30a074f2eabc03f2168922104020000006b4830450221009564cbdbd7bcea04f4130808a83f0de03494a676b2376f8bf0e710aadc4dc41802203494a67a9bdc154af01a74dff57749e5bbf58f93f26641121544caf9d2aa3c7b41210388684af8a7efdceca76f68c3b7e303494a677445cd243859de17f8c237654bd2ffffffff0389030000000000001976a91412811318c9cec427051555adadaf3343bb8a125588ac8a030000000000001976a91419e92fd0ec80a7bc8681e845d4575c28c38d052488ac5a020000000000001976a914ea313e66ebd8acbe8ddeaaa0839deed2db982a2588ac00000000' }
 ```
 
-The transaction is checked for validity, and your server response with the following:
+The transaction is checked for validity, and your server responds with the following:
 
 `{ success: true }`
 
