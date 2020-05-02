@@ -35,7 +35,7 @@ You should respond to that request with an *object* that meets the following cri
 | creationTimestamp (**required**)       | unix timestamp                     |number     |
 | expirationTimestamp        | unix timestamp                     |number     |
 | paymentUrl (**required**) | URL to deliver signed tx to   |string     |
-| memo  | any length is accepted, only first 25 chars accepted   |string     |
+| memo  | any length (first 25 characters appear as note)   |string     |
 | merchantData  | an object containing "avatarUrl" and "merchantName"  |Object     |
 | ├► avatarUrl  | A URL for the logo of the merchant's business or shop   |string     |
 | └► merchantName  | The name of the merchant's business or shop   |string     |
