@@ -1,5 +1,5 @@
 
-# HandCash Payment Requests
+# HandCash Merchant Integration
 
 > Merchant and legacy Payment Requests.
 
