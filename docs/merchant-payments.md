@@ -125,7 +125,7 @@ The marchant also decides that he will designate this URI for a specific item: o
 - **amount**: 0.014572107
 - **tip**: 0.004105377
 - **merchant name**: Medium Coffee 12oz.
-- **link to avatar**: https://bit.ly/3f1fMX7
+- **link to avatar**: https://bit.ly/3c4iaup
 
 ```
 {
@@ -142,7 +142,7 @@ The marchant also decides that he will designate this URI for a specific item: o
   "expirationTimestamp": 1596222180,
   "paymentUrl": "http://142.93.157.92:3000/paid",
   "memo": "this is for coffee",
-  "merchantData": "{\"avatarUrl\":\"https://bit.ly/3f1fMX7\",\"merchantName\":\"Medium Coffee 12oz.\"}",
+  "merchantData": "{\"avatarUrl\":\"https://bit.ly/3c4iaup\",\"merchantName\":\"Medium Coffee 12oz.\"}",
 }
 ```
 
