@@ -1,5 +1,5 @@
 
-# HandCash Payment Requests <small>0.0.1</small>
+# HandCash Payment Requests
 
 > Merchant and legacy Payment Requests.
 
