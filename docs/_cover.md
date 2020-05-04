@@ -1,6 +1,6 @@
 
 # HandCash Merchant Integration
 
-> Merchant and legacy Payment Requests.
+> Merchant and legacy payment requests.
 
 [Get Started](README.md)
