@@ -155,11 +155,12 @@ The customer swipes right to confirm the payment and the merchant receives a sig
 { transaction: '01000000017189fa12d60f042a1f5d9a1be07ad9c687e70ca30a074f2eabc03f2168922104020000006b4830450221009564cbdbd7bcea04f4130808a83f0de03494a676b2376f8bf0e710aadc4dc41802203494a67a9bdc154af01a74dff57749e5bbf58f93f26641121544caf9d2aa3c7b41210388684af8a7efdceca76f68c3b7e303494a677445cd243859de17f8c237654bd2ffffffff0389030000000000001976a91412811318c9cec427051555adadaf3343bb8a125588ac8a030000000000001976a91419e92fd0ec80a7bc8681e845d4575c28c38d052488ac5a020000000000001976a914ea313e66ebd8acbe8ddeaaa0839deed2db982a2588ac00000000' }
 ```
 
-The transaction is checked for validity, the merchant chooses to broadcast the transaction and responds with the following:
+The transaction is checked for validity, the merchant broadcasts or rejects the transaction and responds with the following paymentACK:
 
-`{ success: true }`
+| Name           | Expected Value                                                             |Type      |
+| -------------- | ----------------------------------------------------------------------- |------
+| payment        | Copy of the Payment message that triggered this PaymentACK. |string     |
+| memo  | any length (first 25 characters appear as note)   |string     |
+| error     |   A number indicating why the transaction was not accepted. 0 or undefined indicates no error. A 1 or any other positive integer indicates an error. The errors are left undefined for now; it is recommended only to use "1" and to fill the memo with a textual explanation about why the transaction was not accepted until further numbers are defined and standardized.               |number     |
 
-The transaction is seen as succesful, the user also broadcasts the transaction and records it.
-
-
-
+If the transaction accepted it is seen as succesful, the user also broadcasts the transaction and records it.
