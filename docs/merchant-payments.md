@@ -85,7 +85,10 @@ Once the customer engages the URI, the merchant will send back a transaction tem
   "expirationTimestamp": 1596222180,
   "paymentUrl": "http://142.93.157.92:3000/paid",
   "memo": "this is for coffee",
-  "merchantData": {"avatarUrl": "https://bit.ly/3f1fMX7", "merchantName": "Joes Café"},
+  "merchantData": {
+     "avatarUrl": "https://bit.ly/3f1fMX7", 
+     "merchantName": "Joes Café"
+  },
 }
 ```
 
@@ -142,7 +145,10 @@ The marchant also decides that he will designate this URI for a specific item: o
   "expirationTimestamp": 1596222180,
   "paymentUrl": "http://142.93.157.92:3000/paid",
   "memo": "this is for coffee",
-  "merchantData": {"avatarUrl": "https://bit.ly/3c4iaup", "merchantName": "Medium Coffee 12oz."},
+  "merchantData": {
+    "avatarUrl": "https://bit.ly/3c4iaup", 
+    "merchantName": "Medium Coffee 12oz."
+  },
 }
 ```
 
